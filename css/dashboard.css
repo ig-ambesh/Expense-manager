@@ -1,0 +1,409 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+html,body {
+ width: 100%;
+ height: 100%;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar{
+    width: 250px;
+    /* background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); */
+    background-color: white;
+    color: white;
+    padding: 30px;
+}
+#logo{
+  margin-bottom: 40px;
+  height: 25px;
+}
+#icon{
+  font-size: 25px;
+}
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sidebar a{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    width: 55%;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+.sidebar a:hover{
+  color: red;
+}
+.main{
+    flex: 1;
+    padding: 30px;
+}
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#greeting {
+  font-size: 16px;
+  font-weight: 500;
+}
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.topbar input{
+    width: 300px;
+    padding: 10px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.card p{
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.card{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+.chart{
+    height: 250px;
+    background: white;
+    border-radius: 12px;
+    margin-top: 30px;
+    padding: 20px;
+}
+button{
+    margin-top: 30px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+.table-section{
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th,td{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Add Transaction Styling */
+
+#addBtn {
+  padding: 12px 20px;
+  background-color: royalblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#popupBox {
+  width: 400px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+#closeBtn {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#transactionForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#transactionForm input,
+#transactionForm select {
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btnBox button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#cancelBtn {
+  background-color: lightgray;
+}
+
+.btnBox button:last-child {
+  background-color: royalblue;
+  color: white;
+}
+#in-color{
+  background-color: rgb(140, 249, 171);
+}
+#exp-color{
+  background-color: rgb(250, 137, 137);
+}
+#bal-color{
+  background-color: rgb(187, 230, 255);
+}
+tbody tr td:nth-child(4){
+  color: red;
+}
+tbody tr{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* ================= DARK MODE ================= */
+
+.dark {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Sidebar */
+.dark .sidebar {
+  background-color: #141b2c !important;
+  border-right: 1px solid #1f2937;
+}
+
+.dark .sidebar h2,
+.dark .sidebar a {
+  color: #e2e8f0;
+}
+
+.dark .sidebar a:hover {
+  background-color: #1e293b;
+  border-radius: 10px;
+}
+
+/* Main Area */
+.dark .main {
+  background-color: #0f172a;
+}
+
+/* Search Bar */
+.dark .topbar input {
+  background-color: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+}
+
+.dark .topbar input::placeholder {
+  color: #94a3b8;
+}
+
+/* Cards */
+.dark .card {
+  color: white;
+}
+
+.dark .cards .card:nth-child(1) {
+  background-color: #1e3a5f !important;
+}
+
+.dark .cards .card:nth-child(2) {
+  background-color: #14532d !important;
+}
+
+.dark .cards .card:nth-child(3) {
+  background-color: #7f1d1d !important;
+}
+
+.dark .cards .card:nth-child(4) {
+  background-color: #1e293b !important;
+}
+
+/* Chart */
+.dark .chart {
+  background-color: #111827;
+  color: white;
+  border-radius: 15px;
+}
+
+/* Add Transaction Button */
+.dark #addBtn {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Table */
+.dark .table-section {
+  background-color: #111827;
+  border-radius: 15px;
+}
+
+.dark table {
+  color: white;
+}
+
+.dark th {
+  color: #94a3b8;
+}
+
+.dark td {
+  border-top: 1px solid #1f2937;
+}
+
+/* Edit and Delete Buttons */
+.dark button {
+  background-color: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+}
+
+.dark button:hover {
+  background-color: #2563eb;
+}
+
+/* Popup */
+.dark #popupBox {
+  background-color: #111827;
+  color: white;
+}
+
+.dark #popupBox input,
+.dark #popupBox select {
+  background-color: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+}
+
+/* Moon/Sun Icon */
+.dark #icon {
+  color: #facc15;
+}
+
+
+#settingsPopup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+
+  justify-content: center;
+  align-items: center;
+}
+
+#settingsBox {
+  width: 350px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.settingsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#closeSettings {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#newName{
+  padding: 10px;
+  border-radius: 8px;
+}
+#currency{
+  padding: 10px;
+  border-radius: 8px;
+}
+/* edit and delete button */
+.editBtn,
+.deleteBtn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+.editBtn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.editBtn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.deleteBtn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+.editBtn i,
+.deleteBtn i {
+  margin-right: 5px;
+}
